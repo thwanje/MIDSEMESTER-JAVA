@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            background-color: rgb(241, 247, 252);
+             
+        }
+        div {
+            background-color: #ffffff;
+            font-family: "Segoe UI", Verdana, sans-serif;
+            color:rgb(73,72,72);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0.3rem;
+            
+        }
+        h1 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <script>
+        
+        const products = [
+            { title: "Laptop", price: "$1200" },
+            { title: "Smartphone", price: "$800" },
+            { title: "Headphones", price: "$150" },
+            { title: "Keyboard", price: "$75" }
+        ];
+
+        
+        products.forEach(product => {
+            
+            const productDiv = document.createElement('div');
+
+            
+            const titleElement = document.createElement('h1');
+            titleElement.textContent = product.title;
+
+            
+            const priceElement = document.createElement('p');
+            priceElement.textContent = product.price;
+
+            
+            productDiv.appendChild(titleElement);
+            productDiv.appendChild(priceElement);
+
+        
+            document.body.appendChild(productDiv);
+        });
+    </script>
+
+</body>
+</html>
