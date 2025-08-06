@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function calculateAverage(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+    }
+    let average = sum / numbers.length;
+    return average;
+}
+
+let scores = [85, 90, 78, 92, 88];
+console.log("Average:", calculateAverage(scores));
+    </script>
+</body>
+</html>
